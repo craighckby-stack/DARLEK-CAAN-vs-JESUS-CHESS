@@ -11,6 +11,8 @@
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "noImplicitAny": true,
+    "noUncheckedIndexedAccess": true,
+    "useUnknownInCatchVariables": true,
     "strictPropertyInitialization": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
@@ -20,11 +22,7 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "incremental": true,
-    "composite": true,
-    "declaration": true,
-    "declarationMap": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
+    "verbatimModuleSyntax": true,
     "baseUrl": ".",
     "paths": {
       "@/core/*": ["core/*"],
@@ -33,7 +31,9 @@
       "@/hooks/*": ["hooks/*"],
       "@/components/*": ["components/*"],
       "@/types/*": ["types/*"],
-      "@/lib/*": ["lib/*"]
+      "@/lib/*": ["lib/*"],
+      "@/shared/*": ["shared/*"],
+      "@/utils/*": ["utils/*"]
     }
   },
   "include": [
