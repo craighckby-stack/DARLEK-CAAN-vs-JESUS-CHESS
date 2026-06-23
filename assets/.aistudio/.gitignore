@@ -1,30 +1,35 @@
-# .gitignore for assets/.aistudio/
 # DARLEK CANN v3.0 - SUPREME CODE EVOLUTION CONTROLLER
-# ARCHITECTURAL BLUEPRINT: AI Studio Workspace Isolation
+# ARCHITECTURAL BLUEPRINT: AI Studio Workspace Isolation & Security Manifest
 
 # 1. ENVIRONMENT & SECRETS (CRITICAL LEAK PREVENTION)
 .env*
 !.env.example
 *.local
 *.secret
+*.pem
+*.key
 
-# 2. IDE & OS ARTIFACTS
+# 2. IDE, OS & SYSTEM ARTIFACTS
 .DS_Store
 .vscode/
 .idea/
 *.swp
 *.swo
+*.log
+*.tmp
 
-# 3. BUILD & DEPENDENCY ARTIFACTS
+# 3. BUILD, DEPENDENCY & ORCHESTRATION ARTIFACTS
 node_modules/
 dist/
 build/
 out/
 .next/
 .tsbuildinfo
+.npm/
+.yarn/
 
 # 4. AI/ML EPHEMERAL DATA (Siphoned from SN: OMEGA & unitary-core)
-# Exclude binary weights and large training sets while maintaining schema definitions
+# Exclude binary weights, training sets, and quantum-state snapshots
 *.ckpt
 *.pth
 *.pt
@@ -35,8 +40,10 @@ out/
 *.pb
 models/checkpoints/
 models/binaries/
+models/weights/
 
-# 5. WORKFLOW & EXPERIMENTATION LOGS
+# 5. WORKFLOW, SIMULATION & EXPERIMENTATION LOGS
+# Siphoned from nbody_gravitational_simulator & epistemic_debate_engine
 logs/
 runs/
 tensorboard/
@@ -45,6 +52,7 @@ results/
 artifacts/
 __pycache__/
 .cache/
+*.log.json
 
 # 6. DATABASE & VECTOR STORE PERSISTENCE
 # Essential for epistemic_debate_engine state persistence
@@ -52,13 +60,22 @@ __pycache__/
 *.sqlite-journal
 *.db
 *.vectorstore
+*.faiss
+*.chroma/
 
 # 7. JUPYTER & NOTEBOOK ARTIFACTS
 .ipynb_checkpoints/
 
-# 8. EXPLICIT TRACKING OVERRIDE
-# Ensure architectural blueprints and interface schemas remain tracked
+# 8. EXPLICIT TRACKING OVERRIDE (ARCHITECTURAL INTEGRITY)
+# Ensure architectural blueprints, interface schemas, and agent definitions remain tracked
 !/schemas/**/*.json
 !/agent_definitions/**/*.yaml
 !/prompts/**/*.md
 !/workflows/**/*.json
+!/docs/**/*.md
+!/assets/.aistudio/README.md
+
+# 9. DARLEK CANN SYSTEM OVERRIDES
+# Protect core evolution logic from accidental pruning
+!/src/evolution_engine/**/*.ts
+!/src/orchestrator/**/*.ts
