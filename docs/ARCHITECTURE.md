@@ -1,7 +1,11 @@
-# OMEGA-CORE Deep Dive
+# OMEGA-CORE Architecture Deep Dive
 
-## Quantum-Resistant Initialization
-This module implements a multi-stage handshake ensuring that the Sovereign-Kernel is not compromised during boot. It utilizes a rotating key-store derived from the user's `unitary-core` repository patterns.
+## Overview
+This document details the internal mechanics of the DARLEK CANN v3.0 system, specifically the integration of the Z AGI framework.
 
-## Agent Swarm Logic
-Agents are instantiated as isolated worker threads. Communication occurs via a shared memory buffer, preventing the memory leaks common in standard React state propagation.
+## Z AGI Integration
+The Z AGI framework provides the boundary conditions for the `sovereign-kernel`. 
+
+1. **Constraint Definition**: All self-refactoring code must pass a validation check against the `ZConstraint` interface.
+2. **Memory Persistence**: State is serialized using atomic operations to prevent corruption during refactoring cycles.
+3. **Swarm Dynamics**: Agents operate as independent nodes in an N-Body simulation, where 'mass' is defined by computational complexity.
