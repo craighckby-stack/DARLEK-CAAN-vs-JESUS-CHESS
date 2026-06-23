@@ -1,11 +1,12 @@
-# OMEGA-CORE Architecture Deep Dive
+# System Architecture: DARLEK CANN v3.0
 
 ## Overview
-This document details the internal mechanics of the DARLEK CANN v3.0 system, specifically the integration of the Z AGI framework.
+This document details the internal mechanics of the DARLEK CANN v3.0 engine, incorporating the OMEGA architecture principles.
 
-## Z AGI Integration
-The Z AGI framework provides the boundary conditions for the `sovereign-kernel`. 
+## Modules
+1. **Orchestrator**: Manages agent lifecycle and inter-process communication.
+2. **Memory**: Persistent state storage using the Sovereign-Kernel pattern.
+3. **Simulator**: N-Body gravitational and chess-based tactical simulation engine.
 
-1. **Constraint Definition**: All self-refactoring code must pass a validation check against the `ZConstraint` interface.
-2. **Memory Persistence**: State is serialized using atomic operations to prevent corruption during refactoring cycles.
-3. **Swarm Dynamics**: Agents operate as independent nodes in an N-Body simulation, where 'mass' is defined by computational complexity.
+## Security
+All system calls are wrapped in a validation layer to prevent unauthorized self-refactoring loops.
