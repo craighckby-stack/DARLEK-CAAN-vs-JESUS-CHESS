@@ -50,3 +50,4 @@ export interface ActionDescription {
 - `pruneRedundantStates()`: Clears dead-weight objects from the `DialogueOrchestrator` cache.
 - `syncWithSovereignKernel()`: Ensures self-refactoring agents are aligned with the latest `sovereign-v86` kernel updates.
 - `calculateEntropy()`: Measures the drift between current state and `unitary-core` baseline.
+
