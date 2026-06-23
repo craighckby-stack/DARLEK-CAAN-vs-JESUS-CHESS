@@ -1,8 +1,9 @@
 {
-  "name": "DARLEK CANN Evolution Engine",
-  "short_name": "DARLEK",
+  "name": "DARLEK CANN v3.0",
+  "short_name": "CANN",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#0f172a"
+  "background_color": "#020617",
+  "theme_color": "#3b82f6",
+  "icons": []
 }
