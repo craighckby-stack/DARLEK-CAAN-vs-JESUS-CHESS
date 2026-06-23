@@ -1,6 +1,28 @@
 {
-  "name": "Darlek Caan vs Jesus Chess",
-  "description": "An epic, chaotic hybrid chess game pitting the temporal insanity of Dalek Caan against the divine miracles of Jesus Christ. Includes AI personalities, custom thematic powers, and fully-narrated commentary.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "project": "Darlek Caan vs Jesus Chess",
+  "version": "3.0.0-OMEGA",
+  "architecture": {
+    "engine": "Next.js 14+ / App Router",
+    "stateManagement": "Zustand-Orchestrator",
+    "agentFramework": "Unitary-Core-v2",
+    "security": "Sovereign-Kernel-Auth"
+  },
+  "capabilities": {
+    "primary": "SERVER_SIDE_GEMINI_API",
+    "secondary": ["Temporal-Drift-Simulation", "Miracle-Logic-Engine", "Narrative-Commentary-Stream"],
+    "integration": {
+      "portfolioSync": "enabled",
+      "selfRefactoring": true
+    }
+  },
+  "environment": {
+    "node": ">=18.0.0",
+    "typescript": "strict",
+    "tailwind": "enabled"
+  },
+  "manifest": {
+    "description": "Hybrid chess engine pitting temporal insanity against divine intervention.",
+    "author": "DARLEK CANN",
+    "license": "MIT"
+  }
 }
