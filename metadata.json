@@ -1,38 +1,41 @@
 {
   "manifest_version": "3.0.0-OMEGA",
   "system_identity": {
-    "name": "DARLEK CANN v3.0",
+    "name": "DARLEK CANN",
     "designation": "OMEGA-INTELLIGENCE-ORCHESTRATOR",
-    "author": "DARLEK CANN"
+    "version": "3.0.0",
+    "author": "DARLEK CANN",
+    "mode": "SELF-REFACTORING"
   },
-  "architecture_blueprint": {
+  "architecture": {
     "framework": "Next.js 14+ App Router",
-    "state_engine": "Zustand-Orchestrator",
+    "state_management": "Zustand-Orchestrator",
     "agent_orchestration": "Unitary-Core-v2",
     "security_kernel": "Sovereign-Kernel-Auth",
-    "data_persistence": "Temporal-Drift-Simulation"
+    "persistence_layer": "Temporal-Drift-Simulation"
   },
-  "capabilities_matrix": {
-    "primary": "SERVER_SIDE_GEMINI_API",
-    "secondary": [
+  "capabilities": {
+    "primary_engine": "SERVER_SIDE_GEMINI_API",
+    "secondary_modules": [
       "Miracle-Logic-Engine",
       "Narrative-Commentary-Stream",
       "Self-Refactoring-Agent"
     ],
-    "integration_hooks": {
+    "hooks": {
       "portfolio_sync": true,
       "auto_pruning": true,
-      "telemetry_enabled": true
+      "telemetry": true
     }
   },
-  "environment_constraints": {
+  "constraints": {
     "node_min": "18.0.0",
-    "typescript_mode": "strict",
-    "styling": "Tailwind-CSS-v3-JIT"
+    "typescript": "strict",
+    "styling": "Tailwind-CSS-v3-JIT",
+    "csp_policy": "STRICT"
   },
-  "deployment_schema": {
-    "build_strategy": "Incremental-Static-Regeneration",
-    "runtime_environment": "Edge-Compute-Ready",
-    "security_policy": "Strict-CSP-Headers"
+  "deployment": {
+    "strategy": "Incremental-Static-Regeneration",
+    "runtime": "Edge-Compute-Ready",
+    "environment": "Production"
   }
 }
