@@ -1,74 +1,30 @@
 # .gitignore for assets/.aistudio/
-# This file specifies intentionally untracked files that Git should ignore.
-# It has been comprehensively upgraded from a generic '*' to a specific set of rules
-# tailored for an AI Studio environment, leveraging patterns from Darlek Cann's broader project portfolio.
+# DARLEK CANN v3.0 - SUPREME CODE EVOLUTION CONTROLLER
+# ARCHITECTURAL BLUEPRINT: AI Studio Workspace Isolation
 
-# Architectural Blueprint for assets/.aistudio:
-# This directory is envisioned as a dedicated workspace for AI model development, experimentation,
-# and potentially a staging area for models or agents utilized by core systems like 'darlek-cann-v3',
-# 'epistemic_debate_engine', or 'unitary-core'. It will house configuration files, small scripts,
-# and definitions that *should* be version controlled, while actively ignoring large datasets,
-# trained model binaries, temporary outputs, and local development artifacts.
+# 1. ENVIRONMENT & SECRETS (CRITICAL LEAK PREVENTION)
+.env*
+!.env.example
+*.local
+*.secret
 
-# Technical Workflow & System Integration Schemas:
-# Files tracked here (not ignored) would typically include:
-# - `config.json`: Core configuration for AI agents or studio settings.
-# - `agent_definitions/`: YAML or JSON files defining agent behaviors, prompts, or architectures.
-# - `schemas/`: JSON Schema or TypeScript interface definitions for data exchange within the studio.
-# - `scripts/`: Small utility scripts for data preprocessing or model interaction.
-# - `prompts/`: Text files containing prompt templates for LLMs.
-# - `README.md`: Documentation specific to the AI Studio's usage or setup.
-# - `interfaces/`: TypeScript interface declarations for internal API contracts.
-# - `workflows/`: Definition files for AI-driven workflows or pipelines.
-
-# Files ignored (as defined below) are typically generated, ephemeral, or too large for version control.
-# This ensures a clean repository focused on source code and essential configurations.
-
-# --------------------------------------------------------------------------------------------------
-# General Ignores for Development Environments (Siphoned from common project practices)
-# --------------------------------------------------------------------------------------------------
+# 2. IDE & OS ARTIFACTS
 .DS_Store
-.env
-.env.local
-.env.*.local
-
-# IDE-specific files
 .vscode/
 .idea/
+*.swp
+*.swo
 
-# Log files and temporary files
-*.log
-*.tmp
-*.bak
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-# --------------------------------------------------------------------------------------------------
-# Node.js / TypeScript Specific Ignores (Prevalent in Darlek Cann's portfolio)
-# --------------------------------------------------------------------------------------------------
+# 3. BUILD & DEPENDENCY ARTIFACTS
 node_modules/
 dist/
 build/
 out/
 .next/
+.tsbuildinfo
 
-# Compiled JavaScript and TypeScript artifacts
-*.js
-*.jsx
-*.d.ts
-*.tsbuildinfo
-
-# Test coverage reports
-coverage/
-
-# --------------------------------------------------------------------------------------------------
-# AI/ML Specific Ignores (Critical for an 'aistudio' and projects like 'unitary-core', 'SN')
-# --------------------------------------------------------------------------------------------------
-
-# Model Checkpoints and Artifacts (often large binary files)
+# 4. AI/ML EPHEMERAL DATA (Siphoned from SN: OMEGA & unitary-core)
+# Exclude binary weights and large training sets while maintaining schema definitions
 *.ckpt
 *.pth
 *.pt
@@ -77,39 +33,32 @@ coverage/
 *.tf
 *.keras
 *.pb
-saved_model/
-models/
-checkpoints/
+models/checkpoints/
+models/binaries/
 
-# Data and Datasets (typically large and not version controlled)
-data/
-datasets/
-raw_data/
-processed_data/
-
-# Experiment Logs and Results
+# 5. WORKFLOW & EXPERIMENTATION LOGS
 logs/
 runs/
 tensorboard/
 output/
 results/
-generated/
 artifacts/
-
-# Cache Directories
+__pycache__/
 .cache/
-cache/
-__pycache__/ # Python specific, but common in AI/ML workflows
-venv/ # Python virtual environments
-env/ # Generic virtual environments
 
-# Jupyter Notebook specific ignores
+# 6. DATABASE & VECTOR STORE PERSISTENCE
+# Essential for epistemic_debate_engine state persistence
+*.sqlite
+*.sqlite-journal
+*.db
+*.vectorstore
+
+# 7. JUPYTER & NOTEBOOK ARTIFACTS
 .ipynb_checkpoints/
 
-# User-specific configurations or temporary files that should not be committed
-config.local.json
-settings.json
-
-# --------------------------------------------------------------------------------------------------
-# End of .gitignore
-# --------------------------------------------------------------------------------------------------
+# 8. EXPLICIT TRACKING OVERRIDE
+# Ensure architectural blueprints and interface schemas remain tracked
+!/schemas/**/*.json
+!/agent_definitions/**/*.yaml
+!/prompts/**/*.md
+!/workflows/**/*.json
