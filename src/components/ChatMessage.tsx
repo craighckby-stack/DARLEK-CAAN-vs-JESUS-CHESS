@@ -222,3 +222,4 @@ export default function ChatMessage({ message }: ChatMessageProps) {
     </div>
   );
 }
+
