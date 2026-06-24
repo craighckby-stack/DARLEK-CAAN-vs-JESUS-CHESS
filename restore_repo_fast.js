@@ -15,9 +15,7 @@ https.get(`https://api.github.com/repos/${owner}/${repo}/git/trees/${branch}?rec
     
     // We only restore src/ branch because package.json might have changed
     const srcFiles = tree.filter(f => f.type === 'blob' && f.path.startsWith('src/'));
-    console.log("Restoring " + srcFiles.length + " files from " + repo);
-    
-    const promises = srcFiles.map(file => {
+const promises = srcFiles.map(file => {
       return new Promise(resolve => {
         const dir = path.dirname(file.path);
         fs.mkdirSync(dir, { recursive: true });
@@ -36,3 +34,4 @@ https.get(`https://api.github.com/repos/${owner}/${repo}/git/trees/${branch}?rec
     Promise.all(promises).then(() => console.log("ALL RESTORED!"));
   });
 });
+
