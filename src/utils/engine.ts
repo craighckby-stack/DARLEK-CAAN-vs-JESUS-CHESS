@@ -31,18 +31,21 @@ export function initializePieceAgent(piece: Piece, row: number, col: number): Pi
       switch (col) {
         case 0:
           piece.name = "Dalek Sec";
+          piece.avatar = "/src/assets/images/dalek_sec_1782272175102.jpg";
           piece.personality = "Cold, calculated black commander of the Cult of Skaro.";
           piece.voiceDesc = "refined, menacing, monotone Dalek leader";
           piece.moveStyle = "cautious";
           break;
         case 1:
           piece.name = "Cyber Leader";
+          piece.avatar = "/src/assets/images/cyber_leader_1782272190073.jpg";
           piece.personality = "Unyielding commander of the tactical upgrade legions.";
           piece.voiceDesc = "cold, logical, metallic Cyberman commander";
           piece.moveStyle = "aggressive";
           break;
         case 2:
           piece.name = "Dalek Jast";
+          piece.avatar = "/src/assets/images/dalek_jast_1782272204483.jpg";
           piece.personality = "Zealous Cult priest paranoid of timeline anomalies and miracles.";
           piece.voiceDesc = "screeching, paranoid Dalek sect leader";
           piece.moveStyle = "erratic";
@@ -63,18 +66,21 @@ export function initializePieceAgent(piece: Piece, row: number, col: number): Pi
           break;
         case 5:
           piece.name = "Dalek Thay";
+          piece.avatar = "/src/assets/images/dalek_thay_1782272593220.jpg";
           piece.personality = "Stubborn, heavily armored veteran member of the Skaro council.";
           piece.voiceDesc = "deep, defensive, unyielding Dalek veteran";
           piece.moveStyle = "protective";
           break;
         case 6:
           piece.name = "Cyber Infiltrator";
+          piece.avatar = "/src/assets/images/cyber_infiltrator_1782272611844.jpg";
           piece.personality = "Espionage cyber-unit specialized in organic conversion.";
           piece.voiceDesc = "robotic, whispered cold upgrade assassin";
           piece.moveStyle = "aggressive";
           break;
         case 7:
           piece.name = "Supreme Dalek";
+          piece.avatar = "/src/assets/images/supreme_dalek_1782272626775.jpg";
           piece.personality = "Booming flagship military general with massive shielding rules.";
           piece.voiceDesc = "loud, booming, arrogant Supreme Dalek militarist";
           piece.moveStyle = "protective";
@@ -89,7 +95,18 @@ export function initializePieceAgent(piece: Piece, row: number, col: number): Pi
       const pawnStyles: ("aggressive" | "cautious" | "balanced" | "erratic" | "protective")[] = [
         "aggressive", "cautious", "aggressive", "balanced", "erratic", "cautious", "aggressive", "protective"
       ];
+      const pawnAvatars = [
+        "/src/assets/images/dalek_drone_1782272218583.jpg",
+        "/src/assets/images/cyberman_recruit_1782273293600.jpg",
+        "/src/assets/images/assault_dalek_beta_1782273310567.jpg",
+        "/src/assets/images/dalek_decimator_1782273324427.jpg",
+        "/src/assets/images/chronos_guard_dalek_1782273342822.jpg",
+        "/src/assets/images/temporal_scout_dalek_1782273358893.jpg",
+        "/src/assets/images/cyber_sentry_unit_1782273375394.jpg",
+        "/src/assets/images/supreme_dalek_1782272626775.jpg"
+      ];
       piece.name = pawnNames[col];
+      piece.avatar = pawnAvatars[col];
       piece.personality = `Standard ${piece.name.includes("Cyber") ? "Cybernetic" : "Dalek"} combat drone marching on Skaro orders.`;
       piece.voiceDesc = "monotone, mechanical soldier";
       piece.moveStyle = pawnStyles[col];
@@ -101,18 +118,21 @@ export function initializePieceAgent(piece: Piece, row: number, col: number): Pi
       switch (col) {
         case 0:
           piece.name = "Apostle Peter";
+          piece.avatar = "/src/assets/images/apostle_peter_1782272113650.jpg";
           piece.personality = "The steadfast Rock of the Church, passionately loyal and defensive.";
           piece.voiceDesc = "resolute, brave, core foundational Apostle of holy fire";
           piece.moveStyle = "protective";
           break;
         case 1:
           piece.name = "Apostle Andrew";
+          piece.avatar = "/src/assets/images/apostle_andrew_1782272127428.jpg";
           piece.personality = "Fisherman of men, courageous team builder and quiet helper.";
           piece.voiceDesc = "gentle, hardworking, encouraging fisherman Apostle";
           piece.moveStyle = "balanced";
           break;
         case 2:
           piece.name = "Apostle Thomas";
+          piece.avatar = "/src/assets/images/apostle_thomas_1782272143448.jpg";
           piece.personality = "Highly analytical skeptic. Doubts move patterns until verified by eyes.";
           piece.voiceDesc = "doubting, highly cautious, analytical follower";
           piece.moveStyle = "cautious";
@@ -133,18 +153,21 @@ export function initializePieceAgent(piece: Piece, row: number, col: number): Pi
           break;
         case 5:
           piece.name = "Apostle John";
+          piece.avatar = "/src/assets/images/apostle_john_1782272542078.jpg";
           piece.personality = "The Beloved, poet of holy light and author of grand theological visions.";
           piece.voiceDesc = "deeply spiritual, poet of light, loving disciple";
           piece.moveStyle = "balanced";
           break;
         case 6:
           piece.name = "Apostle Philip";
+          piece.avatar = "/src/assets/images/apostle_philip_1782272558992.jpg";
           piece.personality = "Practical explorer seeking quick answers and direct travel paths.";
           piece.voiceDesc = "practical, literal, curious Apostle of action";
           piece.moveStyle = "aggressive";
           break;
         case 7:
           piece.name = "Apostle James";
+          piece.avatar = "/src/assets/images/apostle_james_1782272576772.jpg";
           piece.personality = "Son of Thunder, full of fiery zeal, marching forward on the wings of lightning.";
           piece.voiceDesc = "thunderous, bold, zealous Apostle of fire and wind";
           piece.moveStyle = "aggressive";
@@ -154,12 +177,23 @@ export function initializePieceAgent(piece: Piece, row: number, col: number): Pi
       // Pawns
       const pawnNames = [
         "Apostle Bartholomew", "Apostle Matthew", "Apostle Thaddeus", "Apostle Simon the Zealot",
-        "Apostle James (Lesser)", "Apostle Jude Thomas", "Apostle Matthias", "Apostle Judas Iscariot"
+        "Apostle James (Lesser)", "Apostle Jude", "Apostle Matthias", "Apostle Judas Iscariot"
       ];
       const pawnStyles: ("aggressive" | "cautious" | "balanced" | "erratic" | "protective")[] = [
         "balanced", "cautious", "balanced", "aggressive", "cautious", "protective", "balanced", "erratic"
       ];
+      const pawnAvatars = [
+        "/src/assets/images/apostle_bartholomew_1782273144541.jpg",
+        "/src/assets/images/apostle_matthew_1782273161951.jpg",
+        "/src/assets/images/apostle_thaddeus_1782273176223.jpg",
+        "/src/assets/images/apostle_simon_zealot_1782273191854.jpg",
+        "/src/assets/images/apostle_james_lesser_1782273205894.jpg",
+        "/src/assets/images/apostle_jude_1782273222646.jpg",
+        "/src/assets/images/apostle_matthias_1782273239894.jpg",
+        "/src/assets/images/apostle_judas_1782273255384.jpg"
+      ];
       piece.name = pawnNames[col];
+      piece.avatar = pawnAvatars[col];
       if (col === 7) {
         piece.personality = "A conflicted and remorseful figure, battling fear, silver temptation, and seeking grace.";
         piece.voiceDesc = "conflicted, anxious, looking for silver or mercy";

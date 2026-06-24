@@ -233,7 +233,7 @@ Return a valid JSON object matching this schema exactly:
         errStr += " " + JSON.stringify(err).toLowerCase();
       } catch (e) {}
 
-      console.warn("Gemini API fallback triggered for /api/chat. Reason:", err?.message || err);
+      console.log("Using local offline fallback dialogs (API unavailable).");
 
       const isQuotaExceeded = errStr.includes("429") || errStr.includes("quota") || errStr.includes("exhausted");
       const isServiceUnavailable = errStr.includes("503") || errStr.includes("unavailable") || errStr.includes("high demand") || errStr.includes("spike");

@@ -156,13 +156,17 @@ export function ChessBoard({
 
                     {/* Custom styling on mechanical faction compared to pure grace faction */}
                     <div
-                      className={`relative z-10 text-2xl sm:text-4xl flex items-center justify-center select-none font-medium ${
+                      className={`relative z-10 w-full h-full flex items-center justify-center select-none overflow-hidden rounded-full ${
                         cell.faction === "jesus"
                           ? "drop-shadow-[0_2px_8px_rgba(255,255,255,0.7)] text-white"
                           : "drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)] text-slate-950"
                       }`}
                     >
-                      {getPieceSymbol(cell)}
+                      {cell.avatar ? (
+                        <img src={cell.avatar} alt={cell.name} className="w-full h-full object-cover" />
+                      ) : (
+                        <span className="text-2xl sm:text-4xl font-medium">{getPieceSymbol(cell)}</span>
+                      )}
                     </div>
 
                     {/* Label Badge underneath characters for absolute clarity */}
@@ -203,9 +207,3 @@ export function ChessBoard({
     </div>
   );
 }
-
-
-
-
-
-

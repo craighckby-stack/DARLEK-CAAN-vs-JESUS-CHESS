@@ -97,9 +97,3 @@ export interface PowerSpec {
   faction: Faction;
   requiresTarget: "friendly" | "enemy" | "empty" | "any" | "captured" | "none";
 }
-
-
-
-
-
-
