@@ -2,6 +2,8 @@
 
 An epic, chaotic hybrid chess game pitting the temporal insanity of Dalek Caan against the divine miracles of Jesus Christ. Includes AI personalities, custom thematic powers, and fully-narrated commentary, all driven by a multi-agent architectural system.
 
+[**Live Preview**](https://ais-pre-e7dbkf6hgdlugfvuo3wguv-483535245139.asia-southeast1.run.app)
+
 ## 🚀 Features
 
 - **Strategic Multi-Agent Council Chamber**: Movement is governed by a political cabinet session where pieces pitch proposals, advisors evaluate, and leaders sign off.
